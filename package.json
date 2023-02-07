@@ -1,0 +1,21 @@
+{
+  "name": "MQTT_Switch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonschema": "^1.4.1",
+    "log4js": "^6.7.1",
+    "mqtt": "^4.3.7",
+    "node-schedule": "^2.1.1",
+    "ssh2": "^1.11.0",
+    "wake_on_lan": "^1.0.0"
+  }
+}

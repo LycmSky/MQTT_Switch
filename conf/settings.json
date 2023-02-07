@@ -1,0 +1,24 @@
+{
+    "mqtt": {
+        "url": "",
+        "options": {
+            "clientId": "node_mqtt_switch",
+            "username": "",
+            "password": ""
+        },
+        "discoveryPrefix": "homeassistant",
+        "checkInterval": 10
+    },
+
+    "devices": [
+        {
+            "name": "new_device",
+            "macAddress": "xx:xx:xx:xx:xx:xx",
+            "ipAddress": "127.0.0.1",
+            "wakePort": 9,
+            "username": "admin",
+            "password": "passwd",
+            "sshPort": 22
+        }
+    ]
+}
