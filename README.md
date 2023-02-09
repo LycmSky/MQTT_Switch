@@ -7,7 +7,7 @@
 通过主板的网络唤醒功能执行设备唤醒任务### ssh2
 通过ssh登录目标机器执行设备关机任务
 
-# 使用部署
+# 部署项目
 ## 一、配置目标设备
 *请自行查询配置方法*
 - 开启ssh
@@ -62,4 +62,23 @@ pnpm install
 ### 启动项目
 ```shell
 pnpm start
+```
+
+# 使用Docker部署项目
+## 生成Docker镜像
+```shell
+docker build --pull --rm -f "dockerfile" -t mqttswitch:latest "."
+```
+## 编辑配置文件
+填写 `conf/settings.json` 并置于想要的目录中
+
+## 启动容器
+```shell
+docker run -d \
+--restart=always \
+--name="mqttswitch" \
+--net=host \
+-v /your/path/settings.json:/app/conf/settings.json \
+-v /your/path/:/app/logs \
+mqttswitch:latest
 ```
